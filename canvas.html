@@ -9,25 +9,19 @@
         <link rel="icon" href="assets/icon.png" />
         <style>
             body { 
-                /* text-align: center;  */
                 font-family: Arial, sans-serif; 
-                /* margin: 0;  */
                 padding: 20px; 
             }
-            
             #videoContainer { 
                 position: relative; 
                 display: inline-block; 
             }
-            
             video { 
                 width: 100%; 
                 max-width: 1000px; 
                 border: 2px solid black; 
                 display: block; 
             }
-            
-            /* Black screen before video loads */
             #blackScreen {
                 position: absolute;
                 top: 0; left: 0;
@@ -37,8 +31,6 @@
                 color: white; font-size: 18px;
                 transition: opacity 1s ease-in-out;
             }
-
-            /* Countdown Text */
             #countdownText {
                 position: absolute;
                 top: 50%;
@@ -52,7 +44,6 @@
                 border-radius: 10px;
                 display: none;
             }
-
             #flash { 
                 position: fixed; 
                 top: 0; 
@@ -64,7 +55,6 @@
                 transition: opacity 0.2s; 
                 pointer-events: none;
             }
-
             #photoContainer { 
                 display: flex; 
                 flex-direction: column; 
@@ -72,31 +62,21 @@
                 gap: 10px; 
                 margin-top: 10px; 
                 width: 170px;
-                /* transform: scaleX(-1); */
             }
-
             .camera-container {
                 display: flex;
                 justify-content: center;
                 gap: 20px;
             }
-
             .photo { width: 100%; max-width: 300px; border: 2px solid black; display: block; }
-
             button { padding: 10px 20px; margin-top: 10px; font-size: 16px; cursor: pointer; }
             #downloadBtn { display: none; }
-
-            /* video {
-                transform: scaleX(-1);
-            } */
-
             .credits-container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 position: relative;
                 bottom: -150px;
-                
             }
         </style>
     </head>
@@ -119,6 +99,8 @@
             <button id="invertBtn">>|<</button>
             <button id="startBtn">Start Countdown</button>
             <button id="doneBtn">Done</button>
+            <!-- Home button to return to welcome.html -->
+            <button id="homeBtn" onclick="window.location.href='welcome.html'">Home</button>
         </div>
         <div id="flash"></div>
         <script src="canvas.js"></script>
